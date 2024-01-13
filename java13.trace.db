@@ -1,0 +1,67 @@
+2023-12-18 14:22:43 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE chocolate_order (\000d\000a    id VARCHAR(128) PRIMARY KEY,\000d\000a    chocolate_type VARCHAR(100),\000d\000a    quantity INT NOT NULL,\000d\000a    price_per_item INT NOT NULL,\000d\000a    customer_email VARCHAR(255),\000d\000a    delivery_address VARCHAR(500)\000d\000a    [*]FOREIGN KEY (chocolate_type) REFERENCES chocolate(id)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE chocolate_order (
+    id VARCHAR(128) PRIMARY KEY,
+    chocolate_type VARCHAR(100),
+    quantity INT NOT NULL,
+    price_per_item INT NOT NULL,
+    customer_email VARCHAR(255),
+    delivery_address VARCHAR(500)
+    FOREIGN KEY (chocolate_type) REFERENCES chocolate(id)
+) [42001-214]
+2023-12-18 14:23:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE chocolate_order (\000d\000a    id VARCHAR(128) PRIMARY KEY,\000d\000a    chocolate_type VARCHAR(100),\000d\000a    quantity INT NOT NULL,\000d\000a    price_per_item INT NOT NULL,\000d\000a    customer_email VARCHAR(255),\000d\000a    delivery_address VARCHAR(500)\000d\000a    [*]FOREIGN KEY (chocolate_type) REFERENCES chocolate(chocolate_type)\000d\000a)"; expected "ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE chocolate_order (
+    id VARCHAR(128) PRIMARY KEY,
+    chocolate_type VARCHAR(100),
+    quantity INT NOT NULL,
+    price_per_item INT NOT NULL,
+    customer_email VARCHAR(255),
+    delivery_address VARCHAR(500)
+    FOREIGN KEY (chocolate_type) REFERENCES chocolate(chocolate_type)
+) [42001-214]
+2023-12-18 18:22:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id FROM order_status WHERE created_at <= NOW - INTERWAL[*]'10'SECOND"; SQL statement:
+SELECT order_id FROM order_status WHERE created_at <= NOW - INTERWAL'10'SECOND [42000-214]
+2023-12-18 18:22:47 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id \000d\000aFROM order_status \000d\000aWHERE created_at <= NOW - INTERWAL [*]'10' SECOND"; SQL statement:
+SELECT order_id 
+FROM order_status 
+WHERE created_at <= NOW - INTERWAL '10' SECOND [42000-214]
+2023-12-18 18:22:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id \000d\000aFROM order_status \000d\000aWHERE created_at <= NOW() - INTERWAL [*]'10' SECOND"; SQL statement:
+SELECT order_id 
+FROM order_status 
+WHERE created_at <= NOW() - INTERWAL '10' SECOND [42000-214]
+2023-12-18 18:23:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id \000d\000aFROM order_status \000d\000aWHERE created_at <= NOW() - INTERWAL [*]'10' SECOND"; SQL statement:
+SELECT order_id 
+FROM order_status 
+WHERE created_at <= NOW() - INTERWAL '10' SECOND [42000-214]
+2023-12-18 18:23:18 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]ORDER_STATUS"; SQL statement:
+ORDER_STATUS [42000-214]
+2023-12-18 18:25:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id \000d\000aFROM order_status \000d\000aWHERE created_at <= NOW() - INTERWAL [*]'10' SECOND"; SQL statement:
+SELECT order_id 
+FROM order_status 
+WHERE created_at <= NOW() - INTERWAL '10' SECOND [42000-214]
+2023-12-18 18:25:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id, status, max(created_at)\000d\000aFROM order_status\000d\000aGROP [*]BY order_id"; SQL statement:
+SELECT order_id, status, max(created_at)
+FROM order_status
+GROP BY order_id [42000-214]
+2023-12-18 18:25:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT order_id, status, max(created_at)\000d\000aFROM order_status\000d\000aGROP [*]BY order_id"; SQL statement:
+SELECT order_id, status, max(created_at)
+FROM order_status
+GROP BY order_id [42000-214]
+2023-12-21 14:30:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE [*]user (\000d\000a    user_id INT AUTO_INCREMENT PRIMARY KEY,\000d\000a    username VARCHAR(45) NOT NULL,\000d\000a    password VARCHAR(45) NOT NULL,\000d\000a    role VARCHAR(45) NOT NULL,\000d\000a    enabled TINYINT DEFAULT NULL\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE user (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(45) NOT NULL,
+    password VARCHAR(45) NOT NULL,
+    role VARCHAR(45) NOT NULL,
+    enabled TINYINT DEFAULT NULL
+) [42001-214]
